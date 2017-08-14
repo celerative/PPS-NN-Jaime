@@ -1,0 +1,5 @@
+INFO:tensorflow:Starting evaluation at 2017-08-14-14:51:51
+INFO:tensorflow:Restoring parameters from /tmp/mnist_convnet_model/model.ckpt-3500
+INFO:tensorflow:Finished evaluation at 2017-08-14-14:52:03
+INFO:tensorflow:Saving dict for global step 3500: accuracy = 0.9784, global_step = 3500, loss = 0.0702957
+{'accuracy': 0.97839999, 'global_step': 3500, 'loss': 0.070295691}
