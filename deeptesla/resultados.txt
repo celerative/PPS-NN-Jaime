@@ -1,0 +1,174 @@
+
+------------------------------------------------
+3 capas conv [8|8|8]
+filtros 3x3
+pooldropout = 0.5
+dense(256) -> act := tanh
+dropout = 0.5
+opt := adadelta
+batch = 64
+
+Epoch 1/6
+	414s - loss: 10.0445 - val_loss: 13.2220
+Epoch 2/6
+	412s - loss: 9.1789 - val_loss: 9.4476
+Epoch 3/6
+	414s - loss: 8.3479 - val_loss: 7.8712
+Epoch 4/6
+	419s - loss: 7.9718 - val_loss: 5.8055
+Epoch 5/6
+	418s - loss: 7.9356 - val_loss: 5.1285
+Epoch 6/6
+	411s - loss: 7.7272 - val_loss: 3.4011
+------------------------------------------------
+3 capas conv [8|8|8]
+filtros 3x3
+dense(256) -> act := tanh
+dropout = 0.5
+opt := adadelta
+batch = 64
+
+Epoch 1/6
+	417s - loss: 9.3135 - val_loss: 16.7604
+Epoch 2/6
+	406s - loss: 9.6814 - val_loss: 13.4404
+Epoch 3/6
+	400s - loss: 8.5556 - val_loss: 7.1072
+Epoch 4/6
+	410s - loss: 7.4481 - val_loss: 6.0794
+Epoch 5/6
+	409s - loss: 6.8412 - val_loss: 5.3868
+Epoch 6/6
+	408s - loss: 6.2951 - val_loss: 5.3000
+------------------------------------------------
+2 capas conv [16|16]
+filtros 3x3
+dense(512) -> act := tanh
+dropout = 0.4
+opt := adadelta
+batch = 64
+
+Epoch 1/4
+	682s - loss: 9.9689 - val_loss: 15.3934
+Epoch 2/4
+	686s - loss: 9.2115 - val_loss: 12.0043
+Epoch 3/4
+	677s - loss: 8.2777 - val_loss: 10.3692
+Epoch 4/4
+	666s - loss: 7.3928 - val_loss: 8.8964
+------------------------------------------------
+2 capas conv [16|8]
+filtros 3x3
+dense(512) -> act := tanh
+dropout = 0.4
+opt := adadelta
+batch = 32
+
+Epoch 1/4
+	752s - loss: 5.5340 - val_loss: 16.4877
+Epoch 2/4
+	751s - loss: 4.2340 - val_loss: 11.8971
+Epoch 3/4
+	764s - loss: 3.8755 - val_loss: 8.0889
+Epoch 4/4
+	755s - loss: 3.8169 - val_loss: 5.5370
+------------------------------------------------
+2 capas conv [8|8]
+filtros 3x3
+dense(256) -> act := tanh
+dropout = 0.25
+opt := adadelta
+batch = 16
+
+Epoch 1/4
+	536s - loss: 2.7497 - val_loss: 15.4304
+Epoch 2/4
+	478s - loss: 2.7420 - val_loss: 12.6916
+Epoch 3/4
+	471s - loss: 2.7354 - val_loss: 10.0978
+Epoch 4/4
+	465s - loss: 2.6518 - val_loss: 10.6281
+------------------------------------------------
+2 capas conv [8|8]
+filtros 3x3
+dense(512) -> act := tanh
+dropout = 0.4
+opt := adadelta
+batch = 32
+
+Epoch 1/4
+	490s - loss: 5.0338 - val_loss: 14.8526
+Epoch 2/4
+	485s - loss: 4.8211 - val_loss: 9.1293
+Epoch 3/4
+	462s - loss: 3.9866 - val_loss: 8.7304
+Epoch 4/4
+	466s - loss: 3.9926 - val_loss: 6.3187
+------------------------------------------------
+2 capas conv
+filtros 3x3
+dense(256) -> act := tanh
+no dropout
+opt := adadelta
+batch = 32
+
+Epoch 1/4
+	491s - loss: 5.3408 - val_loss: 15.7047
+Epoch 2/4
+	487s - loss: 4.2995 - val_loss: 12.3760
+Epoch 3/4
+	486s - loss: 3.9651 - val_loss: 10.2436
+Epoch 4/4
+	488s - loss: 3.9596 - val_loss: 9.2548
+------------------------------------------------
+3 capas conv
+filtros 3x3
+dense(256) -> act := tanh
+dropout = 0.25
+opt := adadelta
+batch = 32
+
+Epoch 1/4
+	509s - loss: 4.7006 - val_loss: 17.2650
+Epoch 2/4
+	500s - loss: 4.3875 - val_loss: 16.7261
+Epoch 3/4
+	491s - loss: 4.2713 - val_loss: 15.1638
+Epoch 4/4
+	494s - loss: 4.4233 - val_loss: 13.1616
+------------------------------------------------
+2 capas conv
+filtros 3x3
+dense(256) -> act := tanh
+dropuot = 0.25
+opt := adadelta
+batch = 32
+
+Epoch 1/2
+	359s - loss: 5.1380 - val_loss: 15.3984
+Epoch 2/2
+	340s - loss: 4.5265 - val_loss: 10.1997
+------------------------------------------------
+2 capas conv
+filtros 3x3
+dense(256) -> act := tanh
+dropout = 0.25
+opt := adam
+batch = 32
+
+Epoch 1/2
+	335s - loss: 23.9631 - val_loss: 5.0316
+Epoch 2/2
+	389s - loss: 23.5660 - val_loss: 5.2178
+------------------------------------------------
+2 capas conv
+filtros 5x5
+dense(256) -> act := tanh
+dropout = 0.25
+opt := adam
+batch = 32
+
+Epoch 1/4
+	919s - loss: 5.0952 - val_loss: 18.2523
+Epoch 2/4
+	699s - loss: 4.2266 - val_loss: 14.9135
