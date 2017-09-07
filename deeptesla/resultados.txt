@@ -1,5 +1,53 @@
 
 ------------------------------------------------
+Conv2D(8, (3, 3), padding = 'same',
+       input_shape = x_train[0].shape)
+
+Conv2D(8, (3, 3), padding = 'same',
+                 kernel_initializer = 'glorot_uniform')
+
+MaxPooling2D(pool_size = (2, 2),
+             strides = (2, 2))
+Dropout(0.25)
+
+Flatten()
+Dense(256)
+Activation('tanh')
+Dropout(0.25)
+
+Dense(1)
+Activation('linear')
+
+Epoch 1/6
+	508s - loss: 10.3964 - val_loss: 7.4407
+Epoch 2/6
+	502s - loss: 4.2533 - val_loss: 5.7250
+Epoch 3/6
+	496s - loss: 3.2586 - val_loss: 5.3807
+Epoch 4/6
+	495s - loss: 2.7207 - val_loss: 5.2963
+Epoch 5/6
+	506s - loss: 2.3482 - val_loss: 4.0607
+Epoch 6/6
+	501s - loss: 2.0535 - val_loss: 4.1131
+------------------------------------------------
+3 capas conv [8|8|8]
+no dropout
+
+Epoch 1/6
+	138s - loss: 13.1421 - val_loss: 6.0237
+Epoch 2/6
+	163s - loss: 7.3959 - val_loss: 7.2559
+Epoch 3/6
+	173s - loss: 5.8789 - val_loss: 5.4805
+Epoch 4/6
+	174s - loss: 5.0428 - val_loss: 8.9011
+Epoch 5/6
+	164s - loss: 4.4871 - val_loss: 5.1630
+Epoch 6/6
+	142s - loss: 3.9920 - val_loss: 5.2217
+
+------------------------------------------------
 3 capas conv [8|8|8]
 filtros 3x3
 pooldropout = 0.5
@@ -104,62 +152,6 @@ Epoch 3/4
 	462s - loss: 3.9866 - val_loss: 8.7304
 Epoch 4/4
 	466s - loss: 3.9926 - val_loss: 6.3187
-------------------------------------------------
-2 capas conv
-filtros 3x3
-dense(256) -> act := tanh
-no dropout
-opt := adadelta
-batch = 32
-
-Epoch 1/4
-	491s - loss: 5.3408 - val_loss: 15.7047
-Epoch 2/4
-	487s - loss: 4.2995 - val_loss: 12.3760
-Epoch 3/4
-	486s - loss: 3.9651 - val_loss: 10.2436
-Epoch 4/4
-	488s - loss: 3.9596 - val_loss: 9.2548
-------------------------------------------------
-3 capas conv
-filtros 3x3
-dense(256) -> act := tanh
-dropout = 0.25
-opt := adadelta
-batch = 32
-
-Epoch 1/4
-	509s - loss: 4.7006 - val_loss: 17.2650
-Epoch 2/4
-	500s - loss: 4.3875 - val_loss: 16.7261
-Epoch 3/4
-	491s - loss: 4.2713 - val_loss: 15.1638
-Epoch 4/4
-	494s - loss: 4.4233 - val_loss: 13.1616
-------------------------------------------------
-2 capas conv
-filtros 3x3
-dense(256) -> act := tanh
-dropuot = 0.25
-opt := adadelta
-batch = 32
-
-Epoch 1/2
-	359s - loss: 5.1380 - val_loss: 15.3984
-Epoch 2/2
-	340s - loss: 4.5265 - val_loss: 10.1997
-------------------------------------------------
-2 capas conv
-filtros 3x3
-dense(256) -> act := tanh
-dropout = 0.25
-opt := adam
-batch = 32
-
-Epoch 1/2
-	335s - loss: 23.9631 - val_loss: 5.0316
-Epoch 2/2
-	389s - loss: 23.5660 - val_loss: 5.2178
 ------------------------------------------------
 2 capas conv
 filtros 5x5
