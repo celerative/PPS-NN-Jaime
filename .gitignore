@@ -4,4 +4,5 @@ __pycache__
 *.pyc
 .ipynb_checkpoints
 env
+deeptesla/*.h5
 deeptesla/saved_models/*.h5

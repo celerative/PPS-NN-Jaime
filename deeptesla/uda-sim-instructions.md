@@ -1,47 +1,39 @@
-## Preparando el simulador del autopilot
-* Descargar e instalar el simulador desde https://github.com/udacity/self-driving-car-sim
-    * En la sección _Avaliable Game Builds_ se hallan disponibles binarios precompilados para su descarga. Nota: todavía no se si se necesita Unity si se instala el simulador por este medio.
-
-* Descargar e instalar Anaconda desde https://www.anaconda.com/download/
-* Clonar el proyecto:
+## Setting up the autopilot simulator
+* Download and install the simulator from https://github.com/udacity/self-driving-car-sim
+    * At section _Avaliable Game Builds_ there are precompiled binaries available for download.
+    **Note:** If the simulator is installed this way, I don't know if you must install Unity to make it work properly.
+* Download and install Anaconda from https://www.anaconda.com/download/
+* Clone this project:
 ```sh
 git clone https://github.com/naokishibuya/car-behavioral-cloning.git
 ```
-* Crear el entorno virtual con conda
+* Create the virtual environment using conda.
 ```sh
 cd car-behavioral-cloning
 conda env create -f environments.xml
 ```
-* Activar el entorno y actualizar keras
+* Activate the environment and update keras.
 ```sh
 source activate car-behavioral-cloning
 pip install --upgrade keras
 ```
-* En utils.py cambiar:
+* At utils.py, change:
 ```py
 IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 66, 200, 3
 ```
 ```py
 IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 64, 128, 3
 ```
-* En drive.py cambiar:
-1)
+* At drive.py, change:
+**Note:** There is no need anymore to normalize the input and output here due to that operation has been built on the CNN and its training.
 ```py
 image = np.array([image])       # the model expects 4D array
 ```
 ```py
 image = np.array([image], dtype = 'float32')
-image /= 255
+#image /= 255
 ```
-2)
-```py
-steering_angle = float(model.predict(image, batch_size=1))
-```
-```py
-STEERING_MAX = 25
-steering_angle = float(model.predict(image, batch_size=1)) / STEERING_MAX
-```
-* Probar
+* Try it out.
 ```py
 python drive.py deeptesla_trained_model.h5
 ```
