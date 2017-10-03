@@ -1,7 +1,8 @@
 ## Setting up the autopilot simulator
 * Download and install the simulator from https://github.com/udacity/self-driving-car-sim
     * At section _Avaliable Game Builds_ there are precompiled binaries available for download.
-    **Note:** If the simulator is installed this way, I don't know if you must install Unity to make it work properly.
+
+	**Note:** If the simulator is installed this way, I don't know if you must install Unity to make it work properly.
 * Download and install Anaconda from https://www.anaconda.com/download/
 * Clone this project:
 ```sh
@@ -25,7 +26,8 @@ IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 66, 200, 3
 IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 64, 128, 3
 ```
 * At drive.py, change:
-**Note:** There is no need anymore to normalize the input and output here due to that operation has been built on the CNN and its training.
+
+	**Note:** There is no need anymore to normalize the input and output here due to that operation has been built on the CNN and its training.
 ```py
 image = np.array([image])       # the model expects 4D array
 ```
