@@ -6,3 +6,4 @@ __pycache__
 env
 deeptesla/*.h5
 deeptesla/saved_models/*.h5
+deeptesla/comentarios.md
